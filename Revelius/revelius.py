@@ -10,11 +10,10 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
-app.config['SECRET_KEY'] = 'thisisasecret' #this needs to be actually a random key
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return 'Hello World!'
 
 
 if __name__ == '__main__':
