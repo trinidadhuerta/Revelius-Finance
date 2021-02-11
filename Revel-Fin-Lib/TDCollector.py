@@ -33,10 +33,10 @@ class TDCollector:
         
 
         response = urllib.request.urlopen(self.url)
-        file = "Data/test.csv"
+        file = "Revel-Fin-Lib/Data/test.csv"
 
         try:
-            with open(file, 'wb') as out_file:
+            with open(file, 'w') as out_file:
                 shutil.copyfileobj(response,out_file)
         except Exception as e:
             print(e)
